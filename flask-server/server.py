@@ -19,10 +19,8 @@ def default():
 
 @app.route("/jakesweeney/home")
 def home_controller():
-    return render_template("home.html")
-
-
-#<img src="{{ url_for('static', filename='minimalist-wallpaper.jpg') }}" class="header-image">
+    return {"members": ["member1", "member2", "member3"]}
+    #return render_template("home.html")
 
 @app.route("/members")
 def members():
