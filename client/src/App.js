@@ -1,18 +1,13 @@
 import React, {useState, useEffect} from 'react'
 import './styles/body.css';
 import './styles/menu.css';
-import bubble from './assets/white-bubble.png';
+import Menu from './components/Menu';
 
 function App() {
     const [data, setData] = useState(0);
 
     useEffect(() => {
-        fetch("/jakesweeney/home", {
-            headers : {
-               'Content-Type': 'application/json',
-               'Accept': 'application/json'
-            }
-        })
+        fetch("/jakesweeney/home")
         .then(
             res => res.status
         )
@@ -24,7 +19,6 @@ function App() {
         )
     }, [])
 
-    //console.log(data);
     return (
         <div>
             {(data !== 201) ? (
@@ -32,10 +26,10 @@ function App() {
             ) : (
                 <div>
                     <div className="hello-message">Hi, my name is Jake</div>
+                    <Menu></Menu>
                 </div>
             )}
         </div>
     );
 }
-//<img src={bubble} alt="bubble" />
 export default App;

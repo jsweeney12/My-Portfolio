@@ -1,24 +1,13 @@
-p {
-    font-family: Monospace;
-}
+p { font-family: Monospace; }
 
-body {
-    background-image: url('../assets/minimalist-wallpaper.jpg');
-    background-position: 40% 5%;
-}
+body { background-image: url('../assets/minimalist-wallpaper.jpg'); background-position: 40% 5%; }
 
 .hello-message {
-    font-family: Monospace;
-    font-size: 60px;
-    color: white;
-    position: absolute;
-    top: 20%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    font-family: Monospace; font-size: 60px; color: white;
 
-    animation-duration: 6s;
-    animation-name: slidein;
-    animation-iteration-count: 1;
+    position: absolute; top: 20%; left: 50%; transform: translate(-50%, -50%);
+
+    animation-duration: 6s; animation-name: slidein; animation-iteration-count: 1;
 }
 
 @keyframes slidein {

@@ -1,0 +1,26 @@
+.menu {
+    font-family: Monospace;
+    font-size: 37px;
+    color: white;
+}
+
+.menu .projects {
+    position: absolute;
+    top: 70%;
+    left: 45%;
+    transform: translate(-50%, -50%);
+}
+
+.menu .profile {
+    position: absolute;
+    top: 70%;
+    left: 30%;
+    transform: translate(-50%, -50%);
+}
+
+.menu .contact {
+    position: absolute;
+    top: 70%;
+    left: 59%;
+    transform: translate(-50%, -50%);
+}
