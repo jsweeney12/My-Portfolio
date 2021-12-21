@@ -25,7 +25,8 @@ function App() {
                 <p>ERROR: {data}</p>
             ) : (
                 <div>
-                    <div className="hello-message">Hi, my name is Jake</div>
+                    <div className="hello-message"> // Hi, my name is </div>
+                    <div className="name">Jake</div>
                     <Menu></Menu>
                 </div>
             )}
