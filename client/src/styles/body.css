@@ -3,15 +3,16 @@ p { font-family: SlateGrey; }
 body { background-color: LightSlateGrey }
 
 .hello-message {
-    font-family: Monospace; font-size: 60px; color: white;
+    font-family: Monospace; font-size: 70px; color: white;
     position: absolute; top: 20%; left: 45%; transform: translate(-50%, -50%);
     animation: slidein 6s; animation-iteration-count: 1;
 }
 .name {
-    font-family: Monospace; font-size: 60px; color: LightGreen;
-    position: absolute; top: 20%; left: 69%; transform: translate(-50%, -50%);
-    animation: slidein 6s 1, changecolor 6s infinite;
+    font-family: Monospace; font-size: 70px; color: LightGreen;
+    position: absolute; top: 20%; left: 73%; transform: translate(-50%, -50%);
+    animation: slidein 6s 1;
 }
+.name:hover { font-size: 85px; color: orange; cursor: pointer; }
 
 @keyframes slidein {
     0% { margin-top: -20%; }
@@ -20,9 +21,9 @@ body { background-color: LightSlateGrey }
 }
 
 @keyframes changecolor {
-    0% { color: LightGreen; }
-    25% { color: Yellow }
-    50% { color: Orange; }
-    75% {color: Blue}
-    100% { color: LightGreen; }
+    0% { color: Blue; }
+    25% { color: Yellow; }
+    50% { color: OrangeRed; }
+    75% {color: Fuchsia;}
+    100% { color: Blue; }
 }

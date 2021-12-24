@@ -1,14 +1,14 @@
 import React from 'react';
 import '../styles/menu.css';
 import folder from '../assets/white-folder.png';
-import profile from '../assets/white-profile.png';
+import profile from '../assets/white-resume.png';
 import contact from '../assets/white-contact.png';
 
 export default class Menu extends React.Component {
     constructor(props) {
         super(props);
         this.projects = "Projects"
-        this.about = "About"
+        this.about = "Resume"
         this.contact = "Contact"
 
         this.projects_image = <img src={folder} alt="folder" />
