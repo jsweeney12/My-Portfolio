@@ -1,4 +1,12 @@
 # My_Website
-A Website designed fully by me to hold my github portfolio and general information about me
+A Website designed fully by me to hold my github portfolio and general information about me.
 
-Link to Website: http://localhost:3000/
+## Technologies
+### Frontend
+- Javascript
+- React.js
+### Backend
+- Python
+- Flask
+
+Link to Website (not yet deployed): http://localhost:3000/
