@@ -1,7 +1,6 @@
 import React, {useState, useEffect} from 'react'
 import './styles/body.css';
-import './styles/menu.css';
-import Menu from './components/Menu';
+import Menu from './components/Menu/Menu';
 
 function App() {
     const [data, setData] = useState(0);
@@ -24,11 +23,7 @@ function App() {
             {(data !== 201) ? (
                 <p>ERROR: {data}</p>
             ) : (
-                <div>
-                    <div className="hello-message"> // Hi, my name is </div>
-                    <div className="name">Jake</div>
-                    <Menu></Menu>
-                </div>
+                <Menu></Menu>
             )}
         </div>
     );
