@@ -1,4 +1,4 @@
-# My_Website
+# My-Portfolio
 A Website designed fully by me to display my portfolio, resume, and general information about me.
 
 ## Technologies
