@@ -1,25 +1,67 @@
 .menu {
     width: 100%;
-    height: 721px;
+    height: 100%;
     background-color: LightSlateGrey;
     font-family: Monospace; 
     font-size: 37px; 
+
+    .projects-text { 
+        color: LightGreen; 
+        position: absolute; 
+        top: 73%; left: 50%; 
+        transform: translate(-50%, -50%); 
+        transition: 0.4s ease;
+    }
+    .projects-image { 
+        position: absolute; 
+        top: 35%; left: 41.5%; 
+        
+        img { width: 35%; height: 35%; }
+    }
+    .projects-text:hover { 
+        font-size: 50px; 
+        color: orange; 
+        cursor: pointer; 
+    }
+
+    .about { 
+        color: LightGreen; 
+        position: absolute; 
+        top: 73%; left: 30%; 
+        transform: translate(-50%, -50%); 
+        transition: 0.4s ease;
+    }
+    .about-image { 
+        position: absolute; 
+        top: 37%; left: 23.5%; 
+
+        img { width: 40%; height: 40%; }
+    }
+    .about:hover { 
+        font-size: 50px; 
+        color: orange; 
+        cursor: pointer; 
+    }
+
+    .contact-text { 
+        color: LightGreen; 
+        position: absolute; 
+        top: 73%; left: 69%; 
+        transform: translate(-50%, -50%); 
+        transition: 0.4s ease;
+    }
+    .contact-image { 
+        position: absolute; 
+        top: 39.5%; left: 62.5%; 
+
+        img { width: 80%; height: 80%; }
+    }
+    .contact-text:hover { 
+        font-size: 50px; 
+        color: orange; 
+        cursor: pointer; 
+    }
 }
-
-.menu .projects { color: LightGreen; position: absolute; top: 70%; left: 50%; transform: translate(-50%, -50%); transition: 0.4s ease;}
-.menu .projects-image { position: absolute; top: 35%; left: 41.5%; }
-.menu .projects-image img { width: 35%; height: 35%; }
-.menu .projects:hover { font-size: 50px; color: orange; cursor: pointer; }
-
-.menu .about { color: LightGreen; position: absolute; top: 70%; left: 30%; transform: translate(-50%, -50%); transition: 0.4s ease;}
-.menu .about-image { position: absolute; top: 37%; left: 23.5%; }
-.menu .about-image img { width: 40%; height: 40%; }
-.menu .about:hover { font-size: 50px; color: orange; cursor: pointer; }
-
-.menu .contact { color: LightGreen; position: absolute; top: 70%; left: 69%; transform: translate(-50%, -50%); transition: 0.4s ease;}
-.menu .contact-image { position: absolute; top: 39.5%; left: 62.5%; }
-.menu .contact-image img { width: 80%; height: 80%; }
-.menu .contact:hover { font-size: 50px; color: orange; cursor: pointer; }
 
 .hello-message {
     font-family: Monospace; font-size: 70px; color: white;
@@ -32,7 +74,11 @@
     animation: slidein 6s 1;
     transition: 0.4s ease;
 }
-.name:hover { font-size: 85px; color: orange; cursor: pointer; }
+.name:hover { 
+    font-size: 85px; 
+    color: orange; 
+    cursor: pointer; 
+}
 
 @keyframes slidein {
     0% { margin-top: -20%; }

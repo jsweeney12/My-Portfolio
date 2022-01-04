@@ -22,7 +22,7 @@ export default function Menu() {
             <div className='projects-image'>
                 {projects_image}
             </div>
-            <div className='projects'>
+            <div className='projects-text'>
                 {projects}
             </div>
 
@@ -36,7 +36,7 @@ export default function Menu() {
             <div className='contact-image'>
                 {contact_image}
             </div>
-            <div className='contact'>
+            <div className='contact-text'>
                 {contact_text}
             </div>
         </div>

@@ -3,6 +3,14 @@
 
     .website-segments {
         width: 100%;
-        height: 100vh;
+        height: calc(100vh - 70px);
+        background-color: lightsteelblue;
+        position: relative;
+        top: 70px;
+
+        > *{
+            width: 100%;
+            height: calc(100vh - 70px);
+        }
     }
 }
