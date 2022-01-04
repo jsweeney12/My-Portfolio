@@ -1,6 +1,7 @@
 import React, {useState, useEffect} from 'react'
-import './styles/body.css';
 import Menu from './components/Menu/Menu';
+import Experience from './components/Experience/Experience';
+import './app.scss';
 
 function App() {
     const [data, setData] = useState(0);
@@ -13,17 +14,19 @@ function App() {
         .then(
             data => {
                 setData(data)
-                console.log(data)
             }
         )
     }, [])
 
     return (
-        <div>
+        <div className='app'>
             {(data !== 201) ? (
                 <p>ERROR: {data}</p>
             ) : (
-                <Menu></Menu>
+                <div className='website-segments'>
+                    <Menu/>
+                    <Experience/>
+                </div>
             )}
         </div>
     );

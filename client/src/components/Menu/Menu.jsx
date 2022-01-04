@@ -1,67 +1,44 @@
 import React from 'react';
-import './menu.css';
+import './menu.scss';
 import folder from './assets/white-folder.png';
 import profile from './assets/white-resume.png';
 import contact from './assets/white-contact.png';
 
-export default class Menu extends React.Component {
-    constructor(props) {
-        super(props);
-        this.state = {isToggleOn: true};
+export default function Menu() {
 
-        this.projects = "Projects"
-        this.about = "Resume"
-        this.contact = "Contact"
+    let projects = "Projects";
+    let about = "Experience";
+    let contact_text = "Contact";
 
-        this.projects_image = <img src={folder} alt="folder" />
-        this.about_image = <img src={profile} alt="about" />
-        this.contact_image = <img src={contact} alt="contact" />
+    let projects_image = <img src={folder} alt="folder" />
+    let about_image = <img src={profile} alt="profile" />
+    let contact_image = <img src={contact} alt="contact" />
 
-        this.handleClick = this.handleClick.bind(this);
-    }
+    return (
+        <div className='menu'>
+            <div className="hello-message"> // Hi, my name is </div>
+            <div className="name">Jake</div>
 
-    handleClick=() => {
-		this.setState(prevState => ({
-			isToggleOn: !prevState.isToggleOn
-		}));
-	}
-
-    render() {
-        console.log(this.state);
-        return (
-
-            <div className='menu'>
-                <div className="hello-message"> // Hi, my name is </div>
-                <div className="name">Jake</div>
-
-                <div className='projects-image'>
-                    {this.projects_image}
-                </div>
-                <div className='projects' onClick={this.handleClick}>
-                    {this.state.isToggleOn ?
-                        'Projects'
-                        :
-                        transitionToProjects()}
-                </div>
-
-                <div className='about-image'>
-                    {this.about_image}
-                </div>
-                <div className='about'>
-                    {this.about}
-                </div>
-
-                <div className='contact-image'>
-                    {this.contact_image}
-                </div>
-                <div className='contact'>
-                    {this.contact}
-                </div>
+            <div className='projects-image'>
+                {projects_image}
             </div>
-        )
-    }
-}
+            <div className='projects'>
+                {projects}
+            </div>
 
-function transitionToProjects() {
+            <div className='about-image'>
+                {about_image}
+            </div>
+            <div className='about'>
+                {about}
+            </div>
 
+            <div className='contact-image'>
+                {contact_image}
+            </div>
+            <div className='contact'>
+                {contact_text}
+            </div>
+        </div>
+    )
 }
