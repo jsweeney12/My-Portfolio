@@ -1,87 +1,52 @@
 .menu {
-    width: 100%;
-    height: 100%;
-    background-color: LightSlateGrey;
-    font-family: Monospace; 
-    font-size: 37px; 
+    width: 300px;
+    height: 100vh;
+    background-color: dimgray;
+    position: fixed;
+    top: 0;
+    right: -300px;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transition: all 1s ease;
 
-    .projects-text { 
-        color: LightGreen; 
-        position: absolute; 
-        top: 73%; left: 50%; 
-        transform: translate(-50%, -50%); 
-        transition: 0.4s ease;
-    }
-    .projects-image { 
-        position: absolute; 
-        top: 35%; left: 41.5%; 
-        
-        img { width: 35%; height: 35%; }
-    }
-    .projects-text:hover { 
-        font-size: 50px; 
-        color: orange; 
-        cursor: pointer; 
+    &.active {
+        right: 0;
     }
 
-    .about { 
-        color: LightGreen; 
-        position: absolute; 
-        top: 73%; left: 30%; 
-        transform: translate(-50%, -50%); 
-        transition: 0.4s ease;
-    }
-    .about-image { 
-        position: absolute; 
-        top: 37%; left: 23.5%; 
+    ul {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        font-size: 40px;
+        color: white;
 
-        img { width: 40%; height: 40%; }
+        li {
+            margin-bottom: 20px;
+            a {
+                font-size: inherit;
+                color: inherit;
+                text-decoration: none;
+                transition: inherit;
+            }
+            &:first-child:hover {
+                color: #90ccf4; 
+                transition: .15s ease;
+            }
+            &:nth-child(2):hover {
+                color: #f3d250; 
+                transition: .15s ease;
+            }
+            &:nth-child(3):hover {
+                color: #f78888; 
+                transition: .15s ease;
+            }
+            &:nth-child(4):hover {
+                color: #5da2d5; 
+                transition: .15s ease;
+            }
+        }
     }
-    .about:hover { 
-        font-size: 50px; 
-        color: orange; 
-        cursor: pointer; 
-    }
-
-    .contact-text { 
-        color: LightGreen; 
-        position: absolute; 
-        top: 73%; left: 69%; 
-        transform: translate(-50%, -50%); 
-        transition: 0.4s ease;
-    }
-    .contact-image { 
-        position: absolute; 
-        top: 39.5%; left: 62.5%; 
-
-        img { width: 80%; height: 80%; }
-    }
-    .contact-text:hover { 
-        font-size: 50px; 
-        color: orange; 
-        cursor: pointer; 
-    }
-}
-
-.hello-message {
-    font-family: Monospace; font-size: 70px; color: white;
-    position: absolute; top: 20%; left: 45%; transform: translate(-50%, -50%);
-    animation: slidein 6s; animation-iteration-count: 1;
-}
-.name {
-    font-family: Monospace; font-size: 70px; color: LightGreen;
-    position: absolute; top: 20%; left: 73%; transform: translate(-50%, -50%);
-    animation: slidein 6s 1;
-    transition: 0.4s ease;
-}
-.name:hover { 
-    font-size: 85px; 
-    color: orange; 
-    cursor: pointer; 
-}
-
-@keyframes slidein {
-    0% { margin-top: -20%; }
-    50% { margin-top: 60px; }
-    100% { margin-top: 0%; }
 }

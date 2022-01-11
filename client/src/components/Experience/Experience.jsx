@@ -3,8 +3,8 @@ import './experience.scss'
 
 export default function Experience() {
     return (
-        <div className='experience'>
-            Experience
+        <div className='experience' id='experience'>
+            
         </div>
     )
 }
