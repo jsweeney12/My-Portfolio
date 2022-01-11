@@ -3,28 +3,37 @@ import './intro.scss';
 import self_portrait from './portfolio_image.png';
 import background from './desk_blurred.png';
 import {ArrowDownward} from '@material-ui/icons';
+import { useEffect, useRef} from 'react';
+import {init } from 'ityped';
 
 export default function Menu() {
     let portrait = <img src={self_portrait} alt="self_portrait" />
     let background_img = <img src={background} alt="background" />
 
+    const textRef = useRef()
+
+    useEffect(()=> {
+        init(textRef.current, {
+            showCursor: true,
+            strings: ["Web Developer", "Game Designer", "Content Creator"],
+        })
+    },[])
+
     return (
         <div className='intro' id='intro'>
             <div className="background">
                 {background_img}
-            </div>
-            <div className="left">
-                {portrait}
-            </div>
-            <div className="right">
-                <div className="wrapper">
-                    <h2>Hi, my name is</h2>
-                    <h1>Jake Sweeney</h1>
-                    <h3>Freelance<span></span></h3>
 
-                    <a href="#experience">
-                        <ArrowDownward className='arrow'/>
-                    </a>
+                <div className="welcome">
+                    <div className="wrapper">
+                        <h2>Hi, my name is</h2>
+                        <h1>Jake Sweeney</h1>
+                        <h3><span ref={textRef}></span></h3>
+
+                        <a href="#experience">
+                            <ArrowDownward className='arrow'/>
+                        </a>
+                    </div>
                 </div>
             </div>
         </div>
