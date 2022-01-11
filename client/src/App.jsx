@@ -7,6 +7,8 @@ import Contact from './components/Contact/Contact';
 import './app.scss';
 import Menu from './components/Menu/Menu';
 
+// Website Structure and navbar largely inspired by the tutorial by Lama Dev:
+// https://youtu.be/7WwtzsSHdpI
 function App() {
     const [data, setData] = useState(0);
     const [menuOpen, setMenuOpen] = useState(false);

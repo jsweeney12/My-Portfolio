@@ -1,22 +1,32 @@
 import React from 'react';
 import './intro.scss';
-import folder from './assets/white-folder.png';
-import profile from './assets/white-resume.png';
-import contact from './assets/white-contact.png';
+import self_portrait from './portfolio_image.png';
+import background from './desk_blurred.png';
+import {ArrowDownward} from '@material-ui/icons';
 
 export default function Menu() {
-
-    let projects = "Projects";
-    let about = "Experience";
-    let contact_text = "Contact";
-
-    let projects_image = <img src={folder} alt="folder" />
-    let about_image = <img src={profile} alt="profile" />
-    let contact_image = <img src={contact} alt="contact" />
+    let portrait = <img src={self_portrait} alt="self_portrait" />
+    let background_img = <img src={background} alt="background" />
 
     return (
         <div className='intro' id='intro'>
-            
+            <div className="background">
+                {background_img}
+            </div>
+            <div className="left">
+                {portrait}
+            </div>
+            <div className="right">
+                <div className="wrapper">
+                    <h2>Hi, my name is</h2>
+                    <h1>Jake Sweeney</h1>
+                    <h3>Freelance<span></span></h3>
+
+                    <a href="#experience">
+                        <ArrowDownward className='arrow'/>
+                    </a>
+                </div>
+            </div>
         </div>
     )
 }

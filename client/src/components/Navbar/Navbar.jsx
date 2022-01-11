@@ -2,6 +2,8 @@ import React from 'react'
 import './navbar.scss'
 import {Mail, Phone} from '@material-ui/icons';
 
+// navbar largely inspired by the tutorial by Lama Dev:
+// https://youtu.be/7WwtzsSHdpI
 export default function Navbar({menuOpen, setMenuOpen}) {
     return (
         <div className={"navbar " + (menuOpen && 'active')}>
