@@ -16,24 +16,23 @@ export default function Menu() {
         init(textRef.current, {
             showCursor: true,
             strings: ["Web Developer", "Game Designer", "Content Creator"],
+            backDelay: 1000,
         })
     },[])
 
     return (
         <div className='intro' id='intro'>
-            <div className="background">
-                {background_img}
+            {background_img}
 
-                <div className="welcome">
-                    <div className="wrapper">
-                        <h2>Hi, my name is</h2>
-                        <h1>Jake Sweeney</h1>
-                        <h3><span ref={textRef}></span></h3>
+            <div className="welcome">
+                <div className="wrapper">
+                    <h2>Hi, my name is</h2>
+                    <h1>Jake Sweeney</h1>
+                    <h3><span ref={textRef}></span></h3>
 
-                        <a href="#experience">
-                            <ArrowDownward className='arrow'/>
-                        </a>
-                    </div>
+                    <a href="#projects">
+                        <ArrowDownward className='arrow'/>
+                    </a>
                 </div>
             </div>
         </div>

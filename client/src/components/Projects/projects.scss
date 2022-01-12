@@ -1,3 +1,98 @@
 .projects {
     background-color: #f78888;
+    color: white;
+    display: flex;
+    justify-content: center;
+    flex-wrap: nowrap;
+
+    .platformer {
+        a {
+            .container {
+                text-align: center;
+
+                .icon {
+                    width: 250px;
+                    height: 250px;
+                    padding-top: 50px;
+                    color: white;
+                    transition: .4s ease;
+                }
+    
+                .icon:hover {
+                    transition: .4s ease;
+                    width: 300px;
+                    height: 300px;
+                    animation: color-shift 3s infinite;
+                }
+            }
+        }
+
+        h1 {
+            text-align: center;
+            font-size: 40px;
+            font-weight: 350;
+        }
+
+        p {
+            text-align: center;
+            font-size: 19px;
+            font-weight: 350;
+            padding-left: 100px;
+            padding-right: 100px;
+            padding-top: 40px;
+        }
+    }
+
+    .portfolio-website {
+        a {
+            .container {
+                text-align: center;
+
+                .icon {
+                    width: 250px;
+                    height: 250px;
+                    padding-top: 50px;
+                    color: white;
+                    transition: .4s ease;
+                }
+    
+                .icon:hover {
+                    transition: .4s ease;
+                    width: 300px;
+                    height: 300px;
+                    animation: color-shift 3s infinite;
+                }
+            }
+        }
+
+        h1 {
+            text-align: center;
+            font-size: 40px;
+            font-weight: 350;
+        }
+
+        p {
+            text-align: center;
+            font-size: 19px;
+            font-weight: 350;
+            padding-left: 100px;
+            padding-right: 100px;
+            padding-top: 40px;
+        }
+    }
+}
+
+@keyframes color-shift {
+    0% {
+        color: white;
+    }
+    33% {
+        color: #5da2d5;
+    }
+    67% {
+        color: #f3d250; 
+    }
+    100% {
+        color: white;
+    }
 }

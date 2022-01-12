@@ -35,8 +35,8 @@ function App() {
                     <Menu menuOpen={menuOpen} setMenuOpen={setMenuOpen}></Menu>
                     <div className='website-segments'>
                         <Intro/>
-                        <Experience/>
                         <Projects/>
+                        <Experience/>
                         <Contact/>
                     </div>
                 </div>
