@@ -1,13 +1,11 @@
 import React from 'react';
 import './intro.scss';
-import self_portrait from './portfolio_image.png';
 import background from './desk_blurred.png';
 import {ArrowDownward} from '@material-ui/icons';
 import { useEffect, useRef} from 'react';
 import {init } from 'ityped';
 
 export default function Menu() {
-    let portrait = <img src={self_portrait} alt="self_portrait" />
     let background_img = <img src={background} alt="background" />
 
     const textRef = useRef()

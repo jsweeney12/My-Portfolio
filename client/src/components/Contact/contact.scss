@@ -1,3 +1,182 @@
 .contact {
     background-color: #90ccf4;
+    color: white;
+    display: flex;
+    flex-direction: column;
+
+    h1 {
+        margin-top: 50px;
+        font-size: 50px;
+        font-weight: 350;
+        text-align: center;
+    }
+
+    .container {
+        text-align: center;
+        overflow: visible;
+
+        .name {
+            margin-top: 50px;
+            padding-left: 10px;
+            width: 500px;
+            height: 40px;
+            position: relative;
+            -moz-border-radius: 10px;
+            -webkit-border-radius: 10px;
+            border-radius: 10px;
+            background-color: white;
+            border: none;
+            font-size: 20px;
+        }
+
+        .email {
+            margin-top: 20px;
+            padding-left: 10px;
+            width: 500px;
+            height: 50px;
+            position: relative;
+            -moz-border-radius: 10px;
+            -webkit-border-radius: 10px;
+            border-radius: 10px;
+            background-color: white;
+            border: none;
+            font-size: 20px;
+        }
+
+        .message {
+            margin-top: 20px;
+            padding-top: 10px;
+            padding-left: 10px;
+            width: 500px;
+            height: 250px;
+            position: relative;
+            -moz-border-radius: 10px;
+            -webkit-border-radius: 10px;
+            border-radius: 10px;
+            background-color: white;
+            border: none;
+            font-size: 20px;
+        }
+
+        .icon {
+            margin-top: 10px;
+            height: 150px;
+            width: 150px;
+            position: absolute;
+            left: 45%;
+
+            :hover {
+                transition: .4s ease;
+                animation: color-faze 3s infinite;
+                z-index: 3;
+                cursor: pointer;
+            }
+
+            &.sent {
+                animation: arrow-fly 3s 1;
+                animation-fill-mode: forwards;
+            }
+        }
+
+        .wrapper {
+            span {
+                display: none;
+                opacity: 0;
+                margin-top: 40px;
+                font-size: 50px;
+                font-weight: 350;
+            }
+
+            &.sent {
+                span {
+                    display: inline-block;
+
+                    &:first-child {
+                        animation: reveal-t 3s 1 forwards;
+                    }
+                    &:nth-child(2) {
+                        animation: reveal-h 3s 1 forwards;
+                    }
+                    &:nth-child(3) {
+                        animation: reveal-a 3s 1 forwards;
+                    }
+                    &:nth-child(4) {
+                        animation: reveal-n 3s 1 forwards;
+                    }
+                    &:nth-child(5) {
+                        animation: reveal-k 3s 1 forwards;
+                    }
+                    &:nth-child(6) {
+                        animation: reveal-s 3s 1 forwards;
+                    }
+                    &:last-child {
+                        animation: reveal-exclamation 3s 1 forwards;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@keyframes reveal-t {
+    40% { opacity: 0; }
+    50% { opacity: 1; }
+    100% { opacity: 1; }
+}
+@keyframes reveal-h {
+    42% { opacity: 0; }
+    52% { opacity: 1; }
+    100% { opacity: 1; }
+}
+@keyframes reveal-a {
+    42% { opacity: 0; }
+    52% { opacity: 1; }
+    100% { opacity: 1; }
+}
+@keyframes reveal-n {
+    44% { opacity: 0; }
+    54% { opacity: 1; }
+    100% { opacity: 1; }
+}
+@keyframes reveal-k {
+    46% { opacity: 0; }
+    56% { opacity: 1; }
+    100% { opacity: 1; }
+}
+@keyframes reveal-s {
+    48% { opacity: 0; }
+    58% { opacity: 1; }
+    100% { opacity: 1; }
+}
+@keyframes reveal-exclamation {
+    50% { opacity: 0; }
+    60% { opacity: 1; }
+    100% { opacity: 1; }
+}
+
+@keyframes color-faze {
+    0% {
+        color: #f78888;
+    }
+    33% {
+        color: #5da2d5;
+    }
+    67% {
+        color: #f3d250; 
+    }
+    100% {
+        color: #f78888;
+    }
+}
+
+@keyframes arrow-fly {
+    0% {
+        left: 45%;
+    }
+    35% {
+        left: 32%;
+    }
+    100% {
+        left: 140%;
+    }
 }

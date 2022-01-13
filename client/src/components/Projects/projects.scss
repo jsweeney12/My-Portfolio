@@ -17,8 +17,11 @@
                     color: white;
                     transition: .4s ease;
                 }
-    
-                .icon:hover {
+            }
+        }
+        a:hover {
+            .container {
+                .icon {
                     transition: .4s ease;
                     width: 300px;
                     height: 300px;
@@ -55,8 +58,11 @@
                     color: white;
                     transition: .4s ease;
                 }
-    
-                .icon:hover {
+            }
+        }
+        a:hover {
+            .container {
+                .icon {
                     transition: .4s ease;
                     width: 300px;
                     height: 300px;

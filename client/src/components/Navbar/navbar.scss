@@ -101,18 +101,15 @@
 
 @keyframes color-change {
     0% {
-        background-color: black;
-    }
-    25% {
         background-color: #f78888; 
     }
-    50% {
+    33% {
         background-color: #5da2d5;
     }
-    75% {
+    67% {
         background-color: #f3d250; 
     }
     100% {
-        background-color: black;
+        background-color: #f78888; 
     }
 }
