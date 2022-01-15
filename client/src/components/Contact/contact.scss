@@ -1,3 +1,5 @@
+@import "../../global.scss";
+
 .contact {
     background-color: #90ccf4;
     color: white;
@@ -18,7 +20,7 @@
             overflow: visible;
 
             .name {
-                margin-top: 50px;
+                margin-top: 20px;
                 padding-left: 10px;
                 width: 500px;
                 height: 40px;

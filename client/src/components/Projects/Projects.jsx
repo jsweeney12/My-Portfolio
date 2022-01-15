@@ -1,6 +1,6 @@
 import React from 'react'
 import './projects.scss'
-import {VideogameAsset, Web, InsertDriveFile} from '@material-ui/icons';
+import {VideogameAsset, Web} from '@material-ui/icons';
 
 export default function Projects() {
     return (

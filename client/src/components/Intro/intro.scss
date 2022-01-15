@@ -1,13 +1,19 @@
+@import "../../global.scss";
+
 .intro {
     color: white;
     display: flex;
     align-items: center;
+    flex-direction: vertical;
     position: relative;
     overflow: hidden;
+    background-image: url(./desk_blurred.png);
+    background-size: cover;
+    background-position: right 35% bottom 55%;
 
     .welcome {
         position: absolute;
-        top: 60%;
+        top: 55%;
         left: 60%;
         transform: translate(-50%, -50%);
         font-weight: 300;
@@ -52,7 +58,8 @@
                 width: 150px;
                 height: 150px;
                 color: white;
-                margin-top: 40px;
+                margin-top: 30px;
+                justify-content: flex-start;
                 animation: arrowFade 4s infinite;
             }
             .arrow:hover {

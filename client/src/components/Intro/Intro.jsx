@@ -1,12 +1,10 @@
 import React from 'react';
 import './intro.scss';
-import background from './desk_blurred.png';
 import {ArrowDownward} from '@material-ui/icons';
 import { useEffect, useRef} from 'react';
 import {init } from 'ityped';
 
 export default function Menu() {
-    let background_img = <img src={background} alt="background" />
 
     const textRef = useRef()
 
@@ -20,8 +18,6 @@ export default function Menu() {
 
     return (
         <div className='intro' id='intro'>
-            {background_img}
-
             <div className="welcome">
                 <div className="wrapper">
                     <h2>Hi, my name is</h2>
