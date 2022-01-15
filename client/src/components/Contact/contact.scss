@@ -4,113 +4,132 @@
     display: flex;
     flex-direction: column;
 
-    h1 {
-        margin-top: 50px;
-        font-size: 50px;
-        font-weight: 350;
-        text-align: center;
-    }
+    form {
 
-    .container {
-        text-align: center;
-        overflow: visible;
-
-        .name {
+        h1 {
             margin-top: 50px;
-            padding-left: 10px;
-            width: 500px;
-            height: 40px;
-            position: relative;
-            -moz-border-radius: 10px;
-            -webkit-border-radius: 10px;
-            border-radius: 10px;
-            background-color: white;
-            border: none;
-            font-size: 20px;
+            font-size: 50px;
+            font-weight: 350;
+            text-align: center;
         }
 
-        .email {
-            margin-top: 20px;
-            padding-left: 10px;
-            width: 500px;
-            height: 50px;
-            position: relative;
-            -moz-border-radius: 10px;
-            -webkit-border-radius: 10px;
-            border-radius: 10px;
-            background-color: white;
-            border: none;
-            font-size: 20px;
-        }
+        .container {
+            text-align: center;
+            overflow: visible;
 
-        .message {
-            margin-top: 20px;
-            padding-top: 10px;
-            padding-left: 10px;
-            width: 500px;
-            height: 250px;
-            position: relative;
-            -moz-border-radius: 10px;
-            -webkit-border-radius: 10px;
-            border-radius: 10px;
-            background-color: white;
-            border: none;
-            font-size: 20px;
-        }
+            .name {
+                margin-top: 50px;
+                padding-left: 10px;
+                width: 500px;
+                height: 40px;
+                position: relative;
+                -moz-border-radius: 10px;
+                -webkit-border-radius: 10px;
+                border-radius: 10px;
+                background-color: white;
+                border: none;
+                font-size: 20px;
 
-        .icon {
-            margin-top: 10px;
-            height: 150px;
-            width: 150px;
-            position: absolute;
-            left: 45%;
+                &:focus {
+                    outline: none;
+                }
 
-            :hover {
-                transition: .4s ease;
-                animation: color-faze 3s infinite;
-                z-index: 3;
-                cursor: pointer;
+                &.empty {
+                    
+                }
             }
 
-            &.sent {
-                animation: arrow-fly 3s 1;
-                animation-fill-mode: forwards;
-            }
-        }
+            .email {
+                margin-top: 20px;
+                padding-left: 10px;
+                width: 500px;
+                height: 50px;
+                position: relative;
+                -moz-border-radius: 10px;
+                -webkit-border-radius: 10px;
+                border-radius: 10px;
+                background-color: white;
+                border: none;
+                font-size: 20px;
 
-        .wrapper {
-            span {
-                display: none;
-                opacity: 0;
-                margin-top: 40px;
-                font-size: 50px;
-                font-weight: 350;
+                &:focus {
+                    outline: none;
+                }
             }
 
-            &.sent {
+            .message {
+                margin-top: 20px;
+                padding-top: 10px;
+                padding-left: 10px;
+                width: 500px;
+                height: 250px;
+                position: relative;
+                -moz-border-radius: 10px;
+                -webkit-border-radius: 10px;
+                border-radius: 10px;
+                background-color: white;
+                border: none;
+                font-size: 20px;
+
+                &:focus {
+                    outline: none;
+                }
+            }
+
+            .icon {
+                margin-top: 10px;
+                height: 150px;
+                width: 150px;
+                position: absolute;
+                left: 45%;
+
+                :hover {
+                    transition: .4s ease;
+                    animation: color-faze 3s infinite;
+                    z-index: 3;
+                    cursor: pointer;
+                }
+
+                &.sent {
+                    animation: arrow-fly 3s 1;
+                    animation-fill-mode: forwards;
+                }
+            }
+
+            .wrapper {
                 span {
-                    display: inline-block;
+                    display: none;
+                    opacity: 0;
+                    margin-top: 40px;
+                    font-size: 50px;
+                    font-weight: 350;
+                }
 
-                    &:first-child {
-                        animation: reveal-t 3s 1 forwards;
-                    }
-                    &:nth-child(2) {
-                        animation: reveal-h 3s 1 forwards;
-                    }
-                    &:nth-child(3) {
-                        animation: reveal-a 3s 1 forwards;
-                    }
-                    &:nth-child(4) {
-                        animation: reveal-n 3s 1 forwards;
-                    }
-                    &:nth-child(5) {
-                        animation: reveal-k 3s 1 forwards;
-                    }
-                    &:nth-child(6) {
-                        animation: reveal-s 3s 1 forwards;
-                    }
-                    &:last-child {
-                        animation: reveal-exclamation 3s 1 forwards;
+                &.sent {
+                    span {
+                        display: inline-block;
+
+                        &:first-child {
+                            animation: reveal-t 3s 1 forwards;
+                        }
+                        &:nth-child(2) {
+                            animation: reveal-h 3s 1 forwards;
+                        }
+                        &:nth-child(3) {
+                            animation: reveal-a 3s 1 forwards;
+                        }
+                        &:nth-child(4) {
+                            animation: reveal-n 3s 1 forwards;
+                        }
+                        &:nth-child(5) {
+                            animation: reveal-k 3s 1 forwards;
+                        }
+                        &:nth-child(6) {
+                            animation: reveal-s 3s 1 forwards;
+                        }
+                        &:last-child {
+                            animation: reveal-exclamation 3s 1 forwards;
+                        }
                     }
                 }
             }

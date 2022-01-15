@@ -12,7 +12,6 @@ import Menu from './components/Menu/Menu';
 function App() {
     const [data, setData] = useState(0);
     const [menuOpen, setMenuOpen] = useState(false);
-    const [messageSent, setMessageSent] = useState(false);
 
     useEffect(() => {
         fetch("/jakesweeney/home")
@@ -38,7 +37,7 @@ function App() {
                         <Intro/>
                         <Projects/>
                         <Experience/>
-                        <Contact messageSent={messageSent} setMessageSent={setMessageSent}/>
+                        <Contact/>
                     </div>
                 </div>
             )}
