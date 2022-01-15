@@ -1,8 +1,18 @@
 
 import os, json
 from flask import Flask, request, jsonify, make_response
+from flask_mail import Mail, Message
 
 app = Flask(__name__)
+mail = Mail(app)
+
+app.config['MAIL_SERVER']='smtp.gmail.com'
+app.config['MAIL_PORT'] = 465
+app.config['MAIL_USERNAME'] = 'jakemsweeney12@gmail.com'
+app.config['MAIL_PASSWORD'] = 'tytosljccmnzuhoc'
+app.config['MAIL_USE_TLS'] = False
+app.config['MAIL_USE_SSL'] = True
+mail = Mail(app)
 
 # Redirects to the main page automatically
 @app.route("/")
@@ -18,9 +28,12 @@ def home_controller():
 @app.route('/send_email', methods=['POST'])
 def send_message():
     email_data = request.get_json()
-    print(email_data['name'])
-    print(email_data['email'])
-    print(email_data['message'])
+    email_body = email_data['message'] + '\n\nemail: ' + email_data['email'] + '\nfrom: ' + email_data['name']
+
+    message = Message('From your portfolio website', sender='jakemsweeney12@gmail.com', recipients=['jakemsweeney12@gmail.com'])
+    message.body = email_body
+    mail.send(message)
+
     res = make_response(jsonify(email_data), 200)
     return res
 

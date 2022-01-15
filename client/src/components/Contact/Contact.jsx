@@ -20,6 +20,7 @@ export default class Contact extends React.Component {
         this.onInputChange = this.onInputChange.bind(this);
     }
 
+    // called whenever a user clicks the arrow button, may or may not succesfully send an email depending on input
     handleSubmit(event) {
         if(this.state.name === '' || this.state.email === '' || this.state.message === '')  {
             if(this.state.name === '') {
@@ -37,6 +38,7 @@ export default class Contact extends React.Component {
 
             const email_data = {"name": this.state.name, "email": this.state.email, "message": this.state.message}
 
+            // fetch send_email from the flask backend and send the data
             fetch('/send_email', {
                 method: "POST",
                 body: JSON.stringify(email_data),
@@ -50,6 +52,7 @@ export default class Contact extends React.Component {
         }
     };
 
+    // updates the current state of all three forms
     onInputChange(event) {
         const target = event.target;
         const value = target.value;
