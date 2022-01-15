@@ -40,6 +40,7 @@ A Website designed fully by me to display my portfolio, resume, and general info
     │       │       └── Projects.scss
     │       ├── App.jsx
     │       ├── app.scss
+    │       ├── global.scss
     │       └── index.js
     ├── server
     │   └── server.py
