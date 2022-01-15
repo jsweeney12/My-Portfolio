@@ -43,7 +43,6 @@ A Website designed fully by me to display my portfolio, resume, and general info
     │       └── index.js
     ├── server
     │   └── server.py
-    │  
     └── README.md
 
 Link to Website (not yet deployed): http://localhost:3000/
