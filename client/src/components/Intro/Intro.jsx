@@ -8,6 +8,7 @@ export default function Menu() {
 
     const textRef = useRef()
 
+    // displays a typing cursor effect with the use of ityped.js
     useEffect(()=> {
         init(textRef.current, {
             showCursor: true,

@@ -13,6 +13,7 @@ function App() {
     const [data, setData] = useState(0);
     const [menuOpen, setMenuOpen] = useState(false);
 
+    // makes sure the server is running
     useEffect(() => {
         fetch("/jakesweeney/home")
         .then(
