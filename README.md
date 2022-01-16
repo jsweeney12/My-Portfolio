@@ -1,5 +1,6 @@
 # My-Portfolio
 A Website designed fully by me to display my portfolio, resume, and general information about me.
+Link to Website (not yet deployed): http://localhost:3000/
 
 ## Technologies
 ### Frontend
@@ -45,8 +46,6 @@ A Website designed fully by me to display my portfolio, resume, and general info
     ├── server
     │   └── server.py
     └── README.md
-
-Link to Website (not yet deployed): http://localhost:3000/
 
 ### To run on your local machine:
 1. clone the repository on your computer
