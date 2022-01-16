@@ -47,3 +47,13 @@ A Website designed fully by me to display my portfolio, resume, and general info
     └── README.md
 
 Link to Website (not yet deployed): http://localhost:3000/
+
+### To run on your local machine:
+1. clone the repository on your computer
+2. Go to the client directory
+3. Enter 'npm i' or 'yarn install' on the command line depending on which package manager you use
+4. Enter 'npm start"
+5. Go to the server directory
+6. installl flask, flask-mail, and create a virtual environment (tutorial here: https://flask.palletsprojects.com/en/2.0.x/installation/ )
+7. Start the flask application (tutorial here: https://flask.palletsprojects.com/en/2.0.x/quickstart/ )
+8. refresh the page, and voila!
