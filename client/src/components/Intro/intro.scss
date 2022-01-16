@@ -18,21 +18,39 @@
         transform: translate(-50%, -50%);
         font-weight: 300;
 
+        @include mobile {
+            flex-direction: vertical;
+            top: 55%;
+            left: 50%;
+        }
+    
         h1 {
             font-size: 90px;
             font-weight: inherit;
             margin-top: 20px;
+
+            @include mobile {
+                font-size: 80px;
+            }
         }
 
         h2 {
             font-size: 50px;
             font-weight: inherit;
+
+            @include mobile {
+                font-size: 40px;
+            }
         }
 
         h3 {
             font-size: 40px;
             font-weight: inherit;
             margin-top: 20px;
+
+            @include mobile {
+                font-size: 30px;
+            }
 
             .ityped-cursor {
                 animation: cursor-blink 1s infinite;
@@ -53,6 +71,11 @@
 
         a {
             position: flex;
+
+            @include mobile {
+                position: relative;
+                left: 25%;
+            }
 
             .arrow {
                 width: 150px;

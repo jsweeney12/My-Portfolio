@@ -20,9 +20,9 @@
             overflow: visible;
 
             .name {
-                margin-top: 20px;
+                margin-top: 50px;
                 padding-left: 10px;
-                width: 500px;
+                width: 35%;
                 height: 40px;
                 position: relative;
                 -moz-border-radius: 10px;
@@ -36,15 +36,15 @@
                     outline: none;
                 }
 
-                &.empty {
-                    
+                @include mobile {
+                    width: 70%;
                 }
             }
 
             .email {
                 margin-top: 20px;
                 padding-left: 10px;
-                width: 500px;
+                width: 35%;
                 height: 50px;
                 position: relative;
                 -moz-border-radius: 10px;
@@ -57,13 +57,17 @@
                 &:focus {
                     outline: none;
                 }
+
+                @include mobile {
+                    width: 70%;
+                }
             }
 
             .message {
                 margin-top: 20px;
                 padding-top: 10px;
                 padding-left: 10px;
-                width: 500px;
+                width: 35%;
                 height: 250px;
                 position: relative;
                 -moz-border-radius: 10px;
@@ -76,6 +80,10 @@
                 &:focus {
                     outline: none;
                 }
+
+                @include mobile {
+                    width: 70%;
+                }
             }
 
             .icon {
@@ -84,6 +92,7 @@
                 width: 150px;
                 position: absolute;
                 left: 45%;
+                animation: arrowFade 4s infinite;
 
                 :hover {
                     transition: .4s ease;
@@ -95,6 +104,15 @@
                 &.sent {
                     animation: arrow-fly 3s 1;
                     animation-fill-mode: forwards;
+
+                    @include mobile {
+                        animation: arrow-fly-mobile 3s 1;
+                        animation-fill-mode: forwards;
+                    }
+                }
+
+                @include mobile {
+                    left: 40%;
                 }
             }
 
@@ -199,5 +217,17 @@
     }
     100% {
         left: 140%;
+    }
+}
+
+@keyframes arrow-fly-mobile {
+    0% {
+        left: 40%;
+    }
+    35% {
+        left: 15%;
+    }
+    100% {
+        left: 200%;
     }
 }

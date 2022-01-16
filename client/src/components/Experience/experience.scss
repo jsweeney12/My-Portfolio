@@ -6,6 +6,12 @@
     display: flex;
     justify-content: space-evenly;
 
+    @include mobile {
+        flex-direction: column;
+        justify-content: flex-start;
+        overflow: scroll;
+    }
+
     .left {
         flex: 0.333;
         

@@ -6,7 +6,7 @@ export default function Projects() {
     return (
         <div className='projects' id='projects'>
             <div className="platformer">
-                <a href="https://github.com/jsweeney12/CS_1666_Platformer" target="_blank">
+                <a href="https://github.com/jsweeney12/CS_1666_Platformer" target="_blank" rel="noreferrer">
                     <div className="container">
                         <VideogameAsset className='icon'/>
                     </div>
@@ -20,7 +20,7 @@ export default function Projects() {
                 </p>
             </div>
             <div className="portfolio-website">
-                <a href="https://github.com/jsweeney12/My-Portfolio" target="_blank">
+                <a href="https://github.com/jsweeney12/My-Portfolio" target="_blank" rel="noreferrer">
                     <div className="container">
                         <Web className='icon'/>
                     </div>

@@ -1,9 +1,17 @@
+@import "../../global.scss";
+
 .projects {
     background-color: #f78888;
     color: white;
     display: flex;
     justify-content: center;
     flex-wrap: nowrap;
+
+    @include mobile {
+        flex-direction: column;
+        justify-content: flex-start;
+        overflow: visible;
+    }
 
     .platformer {
         a {
@@ -43,6 +51,10 @@
             padding-left: 100px;
             padding-right: 100px;
             padding-top: 40px;
+
+            @include mobile {
+                display: none;
+            }
         }
     }
 
@@ -84,6 +96,10 @@
             padding-left: 100px;
             padding-right: 100px;
             padding-top: 40px;
+
+            @include mobile {
+                display: none;
+            }
         }
     }
 }
