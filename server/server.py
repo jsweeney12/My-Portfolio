@@ -1,15 +1,15 @@
 
 import os, json
-from flask import Flask, request, jsonify, make_response
+from flask import Flask, request, jsonify, make_response, redirect, url_for
 from flask_mail import Mail, Message
 
-app = Flask(__name__)
+app = Flask(__name__, static_folder="../client/build", static_url_path='/')
 mail = Mail(app)
 
 app.config['MAIL_SERVER']='smtp.gmail.com'
 app.config['MAIL_PORT'] = 465
 app.config['MAIL_USERNAME'] = 'jakemsweeney12@gmail.com'
-app.config['MAIL_PASSWORD'] = '*********'
+app.config['MAIL_PASSWORD'] = 'cllmxykvakbbzafl'
 app.config['MAIL_USE_TLS'] = False
 app.config['MAIL_USE_SSL'] = True
 mail = Mail(app)
@@ -17,15 +17,15 @@ mail = Mail(app)
 # Redirects to the main page automatically
 @app.route("/")
 def default():
-    return redirect(url_for("home_controller"))
+    return app.send_static_file('index.html')
 
 # basically checks whether the server is running
-@app.route("/jakesweeney/home")
+@app.route("/api/jakesweeney/home")
 def home_controller():
     return 'Done', 201
 
 # collects a a name, email, and message from the frontend and sends an email
-@app.route('/send_email', methods=['POST'])
+@app.route('/api/send_email', methods=['POST'])
 def send_message():
     email_data = request.get_json()
     email_body = email_data['message'] + '\n\nemail: ' + email_data['email'] + '\nfrom: ' + email_data['name']

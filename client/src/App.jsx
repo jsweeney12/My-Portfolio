@@ -15,7 +15,7 @@ function App() {
 
     // makes sure the server is running
     useEffect(() => {
-        fetch("/jakesweeney/home")
+        fetch("http://jakesweeney.me/api/jakesweeney/home")
         .then(
             res => res.status
         )
