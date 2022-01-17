@@ -39,7 +39,7 @@ export default class Contact extends React.Component {
             const email_data = {"name": this.state.name, "email": this.state.email, "message": this.state.message}
 
             // fetch send_email from the flask backend and send the data
-            fetch('http://jakesweeney.me/api/send_email', {
+            fetch('/api/send_email', {
                 method: "POST",
                 body: JSON.stringify(email_data),
                 headers: new Headers({
