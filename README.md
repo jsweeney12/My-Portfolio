@@ -1,7 +1,7 @@
 # My-Portfolio
 A Website designed fully by me to display my portfolio, resume, and general information about me.
 
-Link to Website: jakesweeney.me
+Link to Website: https://www.jakesweeney.me
 
 ## Technologies
 ### Frontend
