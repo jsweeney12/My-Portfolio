@@ -11,6 +11,9 @@ Link to Website (not yet deployed): http://localhost:3000/
 - Python
 - Flask
 - Flask-Mail
+### Deployment
+- Custom domain configured with Namecheap
+- Deployed on Heroku
 
 ### Directory path
 
